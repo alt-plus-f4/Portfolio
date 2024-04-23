@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@layer base {
+  :root {
+	--background: rgb(149, 129, 129);
+	--foreground: white;
+	--nav: rgba(0, 0, 0, 0.775);
+
+	--card: black;
+	--card-foreground: white;
+
+	--popover: black;
+	--popover-foreground: white;
+
+	--primary: white;
+	--primary-foreground: 222.2 47.4% 11.2%;
+
+	--secondary: rgb(149, 149, 149);
+	--secondary-foreground: white;
+
+	--muted: black;
+	--muted-foreground: 215 20.2% 65.1%;
+
+	--accent: rgba(183, 201, 255, 0.248);
+	--accent-foreground: white;
+
+	--destructive: red;
+	--destructive-foreground: white;
+
+	--border: black;
+	--input: black;
+	--ring: green;
+  }
+}
+
+* {
+	font-family: "Lato", sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.head-nav{
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	background: var(--nav);
+	box-shadow: 0 5px 50px #000;
+	align-items: center;
+}
+
+.center-nav, .right-nav{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+.center-nav a{
+	margin: 0 25px;
+	font-weight: 500;
+	text-transform: uppercase;
+	transition: 0.2s linear;
+}
+.center-nav a:hover{
+	color: var(--secondary);
+	font-size: 17px;
+	transition: 0.3s linear;
+
+}
+
+.right-nav a{
+	margin: 0 10px;	
+	font-size: 25px;
+	transition: 0.2s ease-in;
+}
+.right-nav a:hover{
+	color: var(--secondary);
+	transition: 0.3s linear;
+}
