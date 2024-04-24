@@ -1,9 +1,17 @@
+"use client";
+
+import { useState } from 'react';
 import Link from 'next/link';
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaBars } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    }
+
     return (
         <>
         <div className="head-nav">
@@ -11,7 +19,11 @@ const Navbar = () => {
                 <h1>Logo</h1>
             </div>
             
-            <div className="center-nav">
+            <button onClick={toggleMenu} className={`burger-menu ${isOpen ? 'active' : ''}`}>
+                <FaBars />
+            </button>
+
+            <div className={`center-nav ${isOpen ? 'active' : ''}`}>
                 <Link href="/">Home</Link>
                 <Link href="/projects">Personal Projects</Link>
                 <Link href="/accomplishments">Accomplishments</Link>
