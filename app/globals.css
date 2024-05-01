@@ -39,9 +39,6 @@
   }
 }
 
-* {
-	font-family: "Lato", sans-serif;
-}
 
 body {
   background: var(--background);
@@ -169,14 +166,18 @@ body {
 	display: flex;
 	margin: 20px 0;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-	text-align: center;	
 }
 
 .project-container{
 	display: flex;
-	flex-direction: row;
+	box-shadow: 0px 5px 50px var(--card);
+}
+
+.responsive-image {
+    position: relative;
+    width: 45vw;
+    height: 300px;
 }
 
 .project-description{
@@ -184,9 +185,20 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 300px;
+	width: 45vw;
 	background: var(--card-foreground);
 	color: var(--card);
+}
+
+.project-description div h1{
+	font-weight: 700;
+	margin: 10px 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.project-description p{
+	margin-top: 30px;
 }
 
 @media screen and (max-width: 992px){

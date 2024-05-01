@@ -17,7 +17,9 @@ export default function Home() {
 
 			<div className="head-projects-page">
 				<div className="project-container">
-					<Image src="/project1.jpg" alt="Project 1" width={300} height={300} />
+				<div className="responsive-image">
+                    <Image src="/project1.jpg" alt="Project 1" layout="fill" objectFit="cover" />
+                </div>
 					<div className="project-description">
 						<h1>Project 1</h1>
 						<p>Project 1 description</p>
